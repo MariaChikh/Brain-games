@@ -10,17 +10,17 @@ def main():
     k=0
     operation = ['+', '-', '*']
     while k < 3:
-        question = (f'{randint(1, 100)} {choice(operation)} {randint(1 , 100)}')
+        question = (f'{randint(1, 10)} {choice(operation)} {randint(1 , 10)}')
         correct_answer = eval(question)
-        gameplay(question)
-        if int(answer) == correct_answer:
-            correct_answer()
+        answer = gameplay(question)
+        if answer == correct_answer:
+            correct()
             k+=1
         else:
-            lose()
+            lose(answer, correct_answer, name)
             break
     if k==3:
-        win()
+        win(name)
 
 if __name__ == '__main__':
     main()

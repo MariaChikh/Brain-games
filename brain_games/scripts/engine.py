@@ -11,16 +11,16 @@ def welcome_user():
 def gameplay(question):
    
     print (f'Question: {question}')
-    answer = input('Your answer: ')
+    answer =int( input('Your answer: '))
     return answer
 
-def correct_answer():
+def correct():
     print('Correct!')
 
-def lose():
+def lose(answer, correct_answer, name):
     print(f"{answer} is wrong answer ;(. Correct answer was {correct_answer} \n Let's try again, {name}!")
 
 
-def win():
+def win(name):
     print(f'Congratulations, {name}!')
 

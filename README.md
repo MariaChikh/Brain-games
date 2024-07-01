@@ -3,4 +3,6 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a5749b8a1fbd76dcf72f/maintainability)](https://codeclimate.com/github/MariaChikh/python-project-49/maintainability)
 
-Asciinema https://asciinema.org/a/dCjNrCBC75HjFcsI67JkmTGVh
+Asciinema brain-even https://asciinema.org/a/dCjNrCBC75HjFcsI67JkmTGVh
+
+Asciinema brain-calc https://asciinema.org/a/nC4jWbyEAbrxqBnnoXJOdc0SS
