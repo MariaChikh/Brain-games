@@ -13,7 +13,7 @@ def main():
         question = (f'{randint(1, 10)} {choice(operation)} {randint(1 , 10)}')
         correct_answer = eval(question)
         answer = gameplay(question)
-        if answer == correct_answer:
+        if int(answer) == correct_answer:
             correct()
             k+=1
         else:

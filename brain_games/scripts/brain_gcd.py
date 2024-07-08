@@ -24,7 +24,7 @@ def main():
         answer = gameplay(question)
         correct_answer = gcd(a, b)
 
-        if answer == correct_answer:
+        if int(answer) == correct_answer:
             correct()
             k+=1
         else:

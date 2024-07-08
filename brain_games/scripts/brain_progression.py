@@ -21,7 +21,7 @@ def main():
         question = (f'{progression}')
         answer = gameplay(question)
 
-        if answer == correct_answer:
+        if int(answer) == correct_answer:
             correct()
             k+=1
         else:

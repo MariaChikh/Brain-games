@@ -11,7 +11,7 @@ def welcome_user():
 def gameplay(question):
    
     print (f'Question: {question}')
-    answer =int( input('Your answer: '))
+    answer = (input('Your answer: '))
     return answer
 
 def correct():
