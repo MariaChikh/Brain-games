@@ -4,15 +4,15 @@ from brain_games.scripts.engine import *
 
 def main():
     name = welcome_user()
-    
+
     print('Find the greatest common divisor of given numbers.')
 
-    k=0
+    k = 0
     while k < 3:
         a = randint(1, 10)
         b = randint(1, 10)
 
-        def gcd (a,b):
+        def gcd(a, b):
 
             while a != b:
                 if a > b:
@@ -26,13 +26,13 @@ def main():
 
         if int(answer) == correct_answer:
             correct()
-            k+=1
+            k += 1
         else:
             lose(answer, correct_answer, name)
             break
-    if k==3:
+    if k == 3:
         win(name)
 
+
 if __name__ == '__main__':
-    main()
-            
+    main()            
