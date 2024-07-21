@@ -19,6 +19,7 @@ def brain_progression():
         correct_answer = progression[randint(0, len(progression) - 1)]
         correct_answer_index = progression.index(correct_answer)
         progression[correct_answer_index] = '..'
+        progression = ' '.join(map(str, progression))  
         question = (f'{progression}')
         answer = gameplay(question)
 
