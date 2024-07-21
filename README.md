@@ -5,12 +5,47 @@
 
 Play five games and try to win in all of it!
 
-Asciinema brain-even https://asciinema.org/a/dCjNrCBC75HjFcsI67JkmTGVh
+INSTALLATION:
 
-Asciinema brain-calc https://asciinema.org/a/nC4jWbyEAbrxqBnnoXJOdc0SS
+Install using pip:
 
-Asciinema brain-gcd https://asciinema.org/a/SAvdetVqTsvpJBKpcRtgoUESz
+pip install git+https://github.com/MariaChikh/python-project-49.git
 
-Asciinema brain-progression https://asciinema.org/a/3mAg8iMlM6uWrjD863SBauAY2
+INSTRUCTIONS:
 
-Asciinema brain-prime https://asciinema.org/a/6RHdWM46501jhHUIl1Txu4pGs
+This is a five math games:
+1. Calculator
+To win this games you have to solve three math tasks
+
+To start the game run brain-calc
+
+2. Even numbers
+To win this game you have to give an answer is given number even or not
+
+To start the game run brain-even
+
+3. Greatest common dividor
+To win this game you have to find a GCD of three pairs of numbers
+
+To start the game run brain-gcd
+
+4. Prime numbers
+To win this game you have to give an answer ig given number prime or not
+
+To start the game run brain-prime
+
+5. Progression
+To win this game you have to find the missing number in progression
+
+To start the game run brain-progression
+
+
+
+ASCIINEMA:
+
+istallation: 
+brain-calc: [![asciicast](https://asciinema.org/a/MWTizXRuchSmCiA2W59soHbbC.svg)](https://asciinema.org/a/MWTizXRuchSmCiA2W59soHbbC)
+brain-even: [![asciicast](https://asciinema.org/a/qhp660p4inNnoDTP7F6eCmfcq.svg)](https://asciinema.org/a/qhp660p4inNnoDTP7F6eCmfcq)
+brain-gcd: [![asciicast](https://asciinema.org/a/isTU7kcsD18Hlax7qVsozOS1e.svg)](https://asciinema.org/a/isTU7kcsD18Hlax7qVsozOS1e)
+brain-prime: [![asciicast](https://asciinema.org/a/Ef1vQwvqDzXDzFZgdU5clOwPO.svg)](https://asciinema.org/a/Ef1vQwvqDzXDzFZgdU5clOwPO)
+brain-progression: [![asciicast](https://asciinema.org/a/JpQY3Te0numy09nNh2fViqzPG.svg)](https://asciinema.org/a/JpQY3Te0numy09nNh2fViqzPG)
