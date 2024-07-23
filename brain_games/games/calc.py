@@ -7,17 +7,13 @@ def brain_calc():
 
     print('What is the result of the expression?')
 
-    k = 0
-    operation = ['+', '-', '*']
-    while k < 3:
+
+    def generate_question_and_answer():
+        operation = ['+', '-', '*']
         question = (f'{randint(1, 10)} {choice(operation)} {randint(1 , 10)}')
         correct_answer = eval(question)
-        answer = gameplay(question)
-        if int(answer) == correct_answer:
-            correct()
-            k += 1
-        else:
-            lose(answer, correct_answer, name)
-            break
-    if k == 3:
-        win(name)
+        answer = int(gameplay(question))
+        return question, correct_answer, answer
+    
+    question, correct_answer, answer = generate_question_and_answer()
+    check_answer(question, correct_answer, answer, name)

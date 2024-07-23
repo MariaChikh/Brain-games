@@ -16,13 +16,14 @@ def gameplay(question):
     return answer
 
 
-def correct():
-    print('Correct!')
-
-
-def lose(answer, correct_answer, name):
-    print(f"{answer} is wrong answer ;(. Correct answer was {correct_answer} \n Let's try again, {name}!")
-
-
-def win(name):
-    print(f'Congratulations, {name}!')
+def check_answer(question, answer, correct_answer, name):
+    k = 0
+    while k < 3:
+        if answer == correct_answer:
+            print('Correct!')
+            k += 1
+        else:
+            print(f"{answer} is wrong answer ;(. Correct answer was {correct_answer} \n Let's try again, {name}!")
+            break
+    if k == 3:
+        print(f'Congratulations, {name}!')
