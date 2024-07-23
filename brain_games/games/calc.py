@@ -1,5 +1,5 @@
 from random import randint, choice
-from brain_games.engine import *
+from brain_games.engine import welcome_user, gameplay, check_answer
 
 
 def brain_calc():
@@ -13,7 +13,7 @@ def brain_calc():
         question = (f'{randint(1, 10)} {choice(operation)} {randint(1 , 10)}')
         correct_answer = eval(question)
         answer = int(gameplay(question))
-        return question, correct_answer, answer
+        return answer, correct_answer
     
-    question, correct_answer, answer = generate_question_and_answer()
-    check_answer(question, correct_answer, answer, name)
+    answer, correct_answer = generate_question_and_answer()
+    check_answer(generate_question_and_answer, name)

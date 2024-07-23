@@ -16,9 +16,10 @@ def gameplay(question):
     return answer
 
 
-def check_answer(question, answer, correct_answer, name):
+def check_answer(answer, correct_answer, name):
     k = 0
     while k < 3:
+        
         if answer == correct_answer:
             print('Correct!')
             k += 1
