@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.engine import *
+from brain_games.engine import welcome_user, check_answer
 
 
 def brain_progression():
@@ -7,8 +7,7 @@ def brain_progression():
 
     print('What number is missing in the progression?')
 
-    k = 0
-    while k < 3:
+    def generate_question_and_answer():
 
         progression = []
         number = randint(1, 50)
@@ -19,15 +18,8 @@ def brain_progression():
         correct_answer = progression[randint(0, len(progression) - 1)]
         correct_answer_index = progression.index(correct_answer)
         progression[correct_answer_index] = '..'
-        progression = ' '.join(map(str, progression))  
+        progression = ' '.join(map(str, progression))
         question = (f'{progression}')
-        answer = gameplay(question)
+        return question, correct_answer
 
-        if int(answer) == correct_answer:
-            correct()
-            k += 1
-        else:
-            lose(answer, correct_answer, name)
-            break
-    if k == 3:
-        win(name)
+    check_answer(generate_question_and_answer, name)

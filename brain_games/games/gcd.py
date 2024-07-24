@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.engine import *
+from brain_games.engine import welcome_user, check_answer
 
 
 def brain_gcd():
@@ -7,8 +7,8 @@ def brain_gcd():
 
     print('Find the greatest common divisor of given numbers.')
 
-    k = 0
-    while k < 3:
+    def generate_question_and_answer():
+
         a = randint(1, 10)
         b = randint(1, 10)
 
@@ -21,14 +21,8 @@ def brain_gcd():
                     b -= a
             return a
         question = (f'{a} {b}')
-        answer = gameplay(question)
         correct_answer = gcd(a, b)
 
-        if int(answer) == correct_answer:
-            correct()
-            k += 1
-        else:
-            lose(answer, correct_answer, name)
-            break
-    if k == 3:
-        win(name)
+        return question, correct_answer
+
+    check_answer(generate_question_and_answer, name)

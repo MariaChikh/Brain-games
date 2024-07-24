@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.engine import *
+from brain_games.engine import welcome_user, check_answer
 
 
 def brain_even():
@@ -8,31 +8,22 @@ def brain_even():
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
-    def is_even(number):
-        if number % 2 == 0:
-            return True
-        else:
-            return False
+    def generate_question_and_answer():
 
-    k = 0
-    while k < 3:
+        def is_even(number):
+            if number % 2 == 0:
+                return True
+            else:
+                return False
+
         number = randint(1, 100)
         question = (f'{number}')
-        answer = gameplay(question)
 
         if is_even(number) is True:
             correct_answer = 'yes'
         else:
             correct_answer = 'no'
 
-        if is_even(number) is True and answer == 'yes':
-            correct()
-            k += 1
-        elif is_even(number) is False and answer == 'no':
-            correct()
-            k += 1
-        else:
-            lose(answer, correct_answer, name)
-            break
-    if k == 3:
-        win(name)
+        return question, correct_answer
+
+    check_answer(generate_question_and_answer, name)

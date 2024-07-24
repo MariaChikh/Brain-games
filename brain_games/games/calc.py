@@ -7,11 +7,11 @@ def brain_calc():
 
     print('What is the result of the expression?')
 
-
     def generate_question_and_answer():
+
         operation = ['+', '-', '*']
         question = (f'{randint(1, 10)} {choice(operation)} {randint(1 , 10)}')
         correct_answer = eval(question)
         return question, correct_answer
-    
-    check_answer(*generate_question_and_answer(), name)
+
+    check_answer(generate_question_and_answer, name)
