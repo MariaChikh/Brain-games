@@ -9,18 +9,15 @@ def welcome_user():
     return name
 
 
-def gameplay(question):
+def check_answer(question, correct_answer, name):
 
-    print(f'Question: {question}')
-    answer = (input('Your answer: '))
-    return answer
-
-
-def check_answer(answer, correct_answer, name):
     k = 0
     while k < 3:
         
-        if answer == correct_answer:
+        print(f'Question: {question}')
+        answer = (input('Your answer: '))
+
+        if answer == str(correct_answer):
             print('Correct!')
             k += 1
         else:
