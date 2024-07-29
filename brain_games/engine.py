@@ -1,15 +1,14 @@
 import prompt
 
 
-def welcome_user():
+def gameplay(func, description):
 
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
-    return name
 
+    print(description)
 
-def check_answer(func, name):
     k = 0
     while k < 3:
         question, correct_answer = func()

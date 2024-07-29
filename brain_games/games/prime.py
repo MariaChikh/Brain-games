@@ -1,29 +1,21 @@
 from random import randint
-from brain_games.engine import welcome_user, check_answer
 
 
-def brain_prime():
-    name = welcome_user()
+def generate_question_and_answer():
 
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    def is_prime(n):
 
-    def generate_question_and_answer():
+        for i in range(2, (int(n**0.5) + 1)):
+            if n % i == 0:
+                return False
+        return True
 
-        def is_prime(n):
+    number = randint(1, 100)
+    question = (f'{number}')
 
-            for i in range(2, (int(n**0.5) + 1)):
-                if n % i == 0:
-                    return False
-            return True
+    if is_prime(number) is True:
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
 
-        number = randint(1, 100)
-        question = (f'{number}')
-
-        if is_prime(number) is True:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
-
-        return question, correct_answer
-
-    check_answer(generate_question_and_answer, name)
+    return question, correct_answer
