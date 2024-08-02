@@ -1,20 +1,16 @@
 from random import randint
+from math import gcd
+
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+START = 1
+STOP = 10
 
 
 def generate_question_and_answer():
 
-    a = randint(1, 10)
-    b = randint(1, 10)
-
-    def gcd(a, b):
-
-        while a != b:
-            if a > b:
-                a -= b
-            else:
-                b -= a
-        return a
-    question = (f'{a} {b}')
+    a = randint(START, STOP)
+    b = randint(START, STOP)
+    question = f'{a} {b}'
     correct_answer = gcd(a, b)
 
     return question, correct_answer

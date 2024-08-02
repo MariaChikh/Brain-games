@@ -1,10 +1,15 @@
 from random import randint
 
 
+DESCRIPTION = 'What number is missing in the progression?'
+START = 1
+STOP = 50
+
+
 def generate_question_and_answer():
 
     progression = []
-    number = randint(1, 50)
+    number = randint(START, STOP)
     step = randint(3, 10)
     for _ in range(randint(5, 10)):
         progression.append(number)
@@ -13,5 +18,5 @@ def generate_question_and_answer():
     correct_answer_index = progression.index(correct_answer)
     progression[correct_answer_index] = '..'
     progression = ' '.join(map(str, progression))
-    question = (f'{progression}')
+    question = f'{progression}'
     return question, correct_answer

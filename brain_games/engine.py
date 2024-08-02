@@ -1,28 +1,25 @@
 import prompt
+import sys
 
 
-def gameplay(func, description):
+def play(func):
 
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}')
+    print(func.DESCRIPTION)
 
-    print(description)
-
-    k = 0
-    while k < 3:
-        question, correct_answer = func()
+    for _ in range(3):
+        question, correct_answer = func.generate_question_and_answer()
 
         print(f'Question: {question}')
-        answer = (input('Your answer: '))
+        answer = prompt.string('Your answer: ')
 
         if answer == str(correct_answer):
             print('Correct!')
-            k += 1
         else:
             print(f"{answer} is wrong answer ;(."
                   f"Correct answer was {correct_answer}"
                   f"\nLet's try again, {name}!")
-            break
-    if k == 3:
-        print(f'Congratulations, {name}!')
+            sys.exit()
+    print(f'Congratulations, {name}!')
