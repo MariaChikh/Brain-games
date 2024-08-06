@@ -15,6 +15,6 @@ def generate_question_and_answer():
         correct_answer = num_1 + num_2
     elif operation == '-':
         correct_answer = num_1 - num_2
-    else:
+    elif operation == '*':
         correct_answer = num_1 * num_2
-    return question, correct_answer
+    return question, str(correct_answer)

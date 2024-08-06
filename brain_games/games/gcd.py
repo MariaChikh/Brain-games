@@ -13,4 +13,4 @@ def generate_question_and_answer():
     question = f'{a} {b}'
     correct_answer = gcd(a, b)
 
-    return question, correct_answer
+    return question, str(correct_answer)
